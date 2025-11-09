@@ -1,0 +1,385 @@
+:root {
+    --color-principal: #FFD600; 
+    --color-texto: #333333;    
+    --color-fondo-claro: #F9F9F9; 
+    --color-gris-claro: #EEEEEE; 
+    --color-total-consumo: #C82333; 
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 1px; 
+
+    background-image: url('img/Fondo.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-color: #f4f7f6;
+    background-position: center top;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin-bottom: 40px;
+    padding: 15px 20px;
+    background-color: var(--color-texto); 
+    color: white;
+    height: 100px;
+}
+
+.header-content {
+    text-align: center;
+    flex-grow: 1;
+}
+
+header h1 {
+    color: var(--color-principal);
+    margin: 0;
+    font-size: 3.8em;
+    color: #FFD600;
+    text-shadow: 2px 2px 0 #fff;
+}
+
+header p {
+    margin-top: 5px;
+    opacity: 0.8;
+    font-size: 0.9em;
+}
+
+#logo-app, #logo-empresa {
+    height: 80px; 
+    width: 80px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+}
+
+#logo-app {
+    margin-right: 10px; 
+}
+
+#logo-empresa {
+    margin-left: 10px;
+}
+#a-icon {
+    height: 30px; 
+    width: 30px; 
+}
+
+main {
+    max-width: 100%; 
+    margin: 0 auto;
+    display: grid;
+    gap: 30px;
+    padding: 0 10px; 
+}
+
+.form-section, .results-section, .session-section {
+    background-color: white;
+    opacity: 0.9;
+    padding: 25px;
+}
+
+.form-section, .results-section {
+}
+
+.session-section {
+    margin-bottom: 30px;
+}
+
+#cargar-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+#cargar-btn:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    color: var(--color-texto);
+    border-bottom: 2px solid var(--color-gris-claro);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"], .tarifa-selector-box select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--color-gris-claro);
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, .tarifa-selector-box select:focus {
+    border-color: var(--color-principal);
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: var(--color-principal);
+    color: var(--color-texto); 
+    padding: 14px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+    background-color: #FFC107; 
+}
+
+.tarifa-selector-box {
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarifa-selector-box label {
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-right: 15px;
+    width: 35%; 
+}
+
+.tarifa-selector-box select {
+    padding: 8px;
+    flex-grow: 1; 
+    max-width: 65%; 
+    margin-bottom: 0;
+    width: auto;
+}
+
+#lista-dispositivos {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-dispositivos li {
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lista-dispositivos li:last-child {
+    border-bottom: none;
+}
+
+.total-box {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #FFFFB0; 
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-costo {
+    background-color: #BAFFD7;
+}
+
+#costo-diario, #costo-mensual, #costo-anual {
+    font-size: 1.2em;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: var(--color-total-consumo);
+    font-size: 1.1em;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.delete-btn:hover {
+    color: var(--color-principal); 
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--color-gris-claro);
+    margin: 20px 0;
+}
+
+.info-section {
+    background-color: var(--color-fondo-claro);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+.info-section h3 {
+    color: var(--color-total-consumo);
+    padding-bottom: 5px;
+}
+
+.info-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-section ul li {
+    margin-bottom: 8px;
+    padding-left: 1.5em; 
+    text-indent: -1.5em; 
+}
+
+#lista-usuarios-guardados {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-usuarios-guardados li {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fcfcfc;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.user-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.load-user-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.load-user-btn:hover {
+    background-color: #0056b3;
+}
+
+.delete-user-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.delete-user-btn:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    
+    body {
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 10px;
+    }
+
+    .header-content {
+        order: 1; 
+    }
+    
+    #logo-app {
+        order: 0; 
+        margin: 0;
+    }
+    
+    #logo-empresa {
+        order: 2;
+        margin: 0;
+        position: absolute; 
+        top: 25px;
+        right: 15px;
+    }
+
+    header h1 {
+        font-size: 1.6em; 
+    }
+    
+    main {
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .form-section, .results-section, .session-section, .info-section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .tarifa-selector-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .tarifa-selector-box label {
+        width: 100%; 
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+    
+    .tarifa-selector-box select {
+        max-width: 100%; 
+    }
+
+    .total-box {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.9em;
+    }
+    
+    .total-box strong {
+        margin-bottom: 5px;
+    }
+
+    #lista-usuarios-guardados li,
+    #lista-dispositivos li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    #lista-dispositivos li span:first-child {
+        margin-bottom: 5px;
+    }
+
+    .user-actions {
+        margin-top: 5px;
+    }
+}

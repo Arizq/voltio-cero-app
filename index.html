@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltio Cero | Calculadora de ahorro energético</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img id="logo-app" src="img/Voltio_Cero_Logo_f.png" alt="Logo Voltio Cero">
+        
+        <div class="header-content">
+            <h1>Voltio Cero | Calculadora de consumo de luz</h1>
+        </div>
+        
+        <img id="logo-empresa" src="img/IPPS.jpg" alt="Logo de la Empresa">
+    </header>
+
+    <main>
+        
+        <section class="session-section">
+            <h2><img id="a-icon" src="img/home_b.png" alt="home">Gestión de espacios y dispositivos guardados</h2>
+            <p>Ingresa un nombre para cargar o guardar tu lista de espacios (habitaciones o oficinas) en este navegador.</p>
+            
+            <form id="session-form">
+                <label for="username">Nombre de espacio (Para guardar):</label>
+                <input type="text" id="username" required placeholder="Ej: Cuarto de Juan" value="EspacioPredeterminado">
+                <button type="submit" id="cargar-btn">Cargar / Guardar </button>
+            </form>
+            <p id="session-status" style="margin-top: 10px; font-weight: bold;"></p>
+
+            <hr>
+
+            <h3>Espacios guardados en este navegador</h3>
+            <ul id="lista-usuarios-guardados">
+                </ul>
+        </section>
+        
+        <section class="form-section">
+            <h2><img id="a-icon" src="img/add_b.png" alt="Add">Añadir Dispositivo</h2>
+            <form id="dispositivo-form">
+                
+                <label for="nombre">Nombre del Dispositivo:</label>
+                <input type="text" id="nombre" required placeholder="Ej: Monitor LED">
+
+                <label for="watts">Watts (por unidad):</label>
+                <input type="number" id="watts" required min="1" placeholder="Ej: 30">
+
+                <label for="cantidad">Cantidad de unidades:</label>
+                <input type="number" id="cantidad" required min="1" value="1">
+                
+                <label for="horas">Horas de uso al día (promedio):</label>
+                <input type="number" id="horas" required min="0.1" max="24" step="0.1" placeholder="Ej: 5"> 
+
+                <button type="submit">Añadir y Calcular</button>
+            </form>
+        </section>
+
+        <section class="results-section">
+            <h2>Detalle de Consumo</h2>
+            
+            <div class="tarifa-selector-box">
+                <label for="tarifa">Calculando con Tarifa:</label>
+                <select id="tarifa" required>
+                    <option value="1">Tarifa 1 (Básica / Baja Demanda)</option>
+                    <option value="1A">Tarifa 1A (Clima Cálido)</option>
+                    <option value="1B">Tarifa 1B (Clima Muy Cálido)</option>
+                    <option value="1C">Tarifa 1C (Clima Caluroso)</option>
+                    <option value="DAC">Tarifa DAC (Alto Consumo)</option>
+                </select>
+            </div>
+            
+            <hr>
+            
+            <ul id="lista-dispositivos">
+                </ul>
+
+            <h3>Resumen de Consumo Total</h3>
+
+            <div class="total-box">
+                <strong>Consumo Diario Estimado:</strong>
+                <span id="total-wh-dia">0 Wh</span>
+            </div>
+            <div class="total-box total-costo total-diario">
+                <strong>Costo Estimado Diario:</strong>
+                <span id="costo-diario">0.00 MXN</span>
+            </div>
+            
+            <hr>
+
+            <div class="total-box">
+                <strong>Consumo Mensual Estimado:</strong>
+                <span id="total-kwh">0 kWh</span>
+            </div>
+            <div class="total-box total-costo">
+                <strong>Costo Estimado Mensual (IVA Incluido):</strong>
+                <span id="costo-mensual">0.00 MXN</span> 
+            </div>
+
+            <hr>
+
+            <div class="total-box">
+                <strong>Consumo Anual Estimado:</strong>
+                <span id="total-kwh-anual">0 kWh</span>
+            </div>
+            <div class="total-box total-costo total-anual">
+                <strong>Costo Estimado Anual (IVA Incluido):</strong>
+                <span id="costo-anual">0.00 MXN</span>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
