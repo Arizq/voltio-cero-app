@@ -382,7 +382,8 @@ hr {
     .user-actions {
         margin-top: 5px;
     }
-    /* --- ESTILOS DEL FOOTER --- */
+}
+/* --- ESTILOS DEL FOOTER --- */
 footer {
     background-color: var(--color-texto); /* Gris oscuro, como el header */
     color: white;
@@ -425,4 +426,3 @@ footer a:hover {
     }
 }
 
-}
