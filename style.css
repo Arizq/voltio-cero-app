@@ -382,4 +382,47 @@ hr {
     .user-actions {
         margin-top: 5px;
     }
+    /* --- ESTILOS DEL FOOTER --- */
+footer {
+    background-color: var(--color-texto); /* Gris oscuro, como el header */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px; /* Espacio entre el contenido principal y el footer */
+    
+    /* Usamos flexbox para centrar y justificar contenido */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--color-principal); /* Enlace en color amarillo */
+    text-decoration: none; /* Quitar subrayado */
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff; /* Blanco al pasar el ratón */
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    filter: invert(100%) saturate(1000%) hue-rotate(10deg); /* Opcional: Para hacer el ícono amarillo/blanco */
+}
+
+/* Ajuste para móvil: Apilar contenido del footer */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 10px;
+    }
+}
+
 }
